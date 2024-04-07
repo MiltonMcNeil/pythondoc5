@@ -1,0 +1,33 @@
+#Homework
+
+class parkingGarage():
+
+    def __init__(self, tickets, parkingSpaces, currentTicket):
+        self.tickets = tickets
+        self.parkingSpaces = parkingSpaces
+        self.currentTicket = currentTicket
+
+    def takeTicket(self):
+        x = input('Would you like to park in this garage?(yes/no)')
+        # parkingSpaces = 40
+        # tickets = 40 
+        if x == 'yes':
+            print('Please take the ticket. You have fifteen minutes.')
+            self.parkingSpaces - 1
+            self.tickets - 1
+        else: 
+            print('Have a nice day')
+    
+    def payForParking(self):
+        self.payment = input('It will be five dollars')
+        if int(self.payment) >= 5:
+            print('Thank you, have a nice day.')
+            self.parkingSpaces + 1
+            self.tickets + 1
+        else:
+            input('Something is wrong with your payemnt, please try again.')
+
+
+mall_lot = parkingGarage(40, 40, {})
+
+mall_lot.takeTicket()
